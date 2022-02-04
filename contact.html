@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>HOME</title>
+</head>
+<body>
+<!-- START NAVBAR  -->
+<nav>
+  <div class="nav-left">
+    <a href="index.html"><img src="assets/img/logo_dumbways.png" alt="my_logo"></a>
+    <ul style="text-decoration: none;">
+      <li><a class="active" href="index.html" target="blank">Home</a></li>
+      <li><a href="blog.html" target="blank">Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-right">
+    <a href="contact.html">Contact me</a>
+  </div>
+</nav>
+<!-- END NAVBAR  -->
+
+
+
+   <div class="container">
+      <div class="card">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="fname">Name</label>
+            <input type="text" required id="txt_name" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Email</label>
+            <input type="email" required id="txt_email" name="lastname" placeholder="Your last name..">
+            
+            <label for="number">Number</label>
+            <input type="text" required id="txt_number" name="number" placeholder="Your number..">
+        
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <label for="message">Your Message</label>
+            <textarea class="contactMessage" name="message" maxlength="200" id="message" cols="88" rows="10"></textarea>
+            <!-- <input type="submit" value="Submit"> -->
+            <button type="button" onclick="showData()">Submit</button>
+        </form>
+      </div>
+      
+   </div>
+
+
+
+<!-- START JS -->
+<script src="assets/js/form_submission.js"></script>
+
+
+<!-- END JS -->
+</body>
+</html>
