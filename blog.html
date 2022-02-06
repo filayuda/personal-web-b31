@@ -1,43 +1,54 @@
-<html>
-  <head>
-    <title>Creating Blog Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NavBar -->
-    <nav>
-      <div class="left-side">
-        <a href="index.html">
-          <img src="" alt="logo" />
-        </a>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="blog.html" class="list-active">Blog</a>
-          </li>
-        </ul>
-      </div>
-      <div class="right-side">
-        <a href="contact.html"> Contact Me </a>
-      </div>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.min.css"> 
+    <title>Creating Nav & Layouting</title>
+</head>
+<body>
+<!-- START NAVBAR  -->
+<nav>
+  <div class="nav-left">
+    <a href="index.html"><img src="assets/img/logo_dumbways.png" alt="my_logo"></a>
+    <ul style="text-decoration: none;">
+      <li><a href="index.html" target="blank">Home</a></li>
+      <li><a href="blog.html" target="blank">Blog</a></li>
+    </ul>
+  </div>
 
-    <!-- Blog -->
+  <div class="nav-right">
+    <a href="contact.html">Contact me</a>
+  </div>
+</nav>
+<!-- END NAVBAR  -->
+
+ <!-- Blog -->
     <!-- Form -->
     <div class="blog">
       <div class="blog-form">
         <div class="form-container">
           <form name="form1" onsubmit="addBlog(event)">
-            <h1>Create Post Blog</h1>
+            <h1>ADD MY PROJECT</h1>
             <div>
-              <label for="input-blog-title">Title</label>
+              <label for="input-blog-title">Project Name</label>
               <input id="input-blog-title" />
             </div>
+            <div class="input-date">
+              <div>
+                <label for="input-blog-date">Start Date</label>
+                <input id="input-blog-dateStart" type="date"/>
+              </div>
+              <div class="right">
+                <label for="input-blog-title">End Date</label>
+                <input id="input-blog-dateEnd" type="date" />
+              </div>
+            </div>
             <div>
-              <label for="input-blog-content">Content</label>
-              <textarea id="input-blog-content"></textarea>
+              <label for="input-blog-description">Description</label>
+              <textarea id="input-blog-description"></textarea>
             </div>
 
             <div>
@@ -45,16 +56,15 @@
                 <div class="skills">
                   
                   <div class="skill">
-                    <input  type="checkbox" id="input-blog-skill" name="skill" value="node.png">
+                    <input  type="checkbox" id="skill" name="skill" value="fab fa-node" checked>
                     <label for="skill" class="label-skill"> Node JS</label>
-                    <input type="checkbox" id="input-blog-skill" name="skill" value="reactjs.png" >
+                    <input type="checkbox" id="skill" name="skill" value="fab fa-react" >
                     <label for="skill" class="label-skill"> React JS</label>
                   </div>
-
                   <div class="skill">
-                    <input type="checkbox" id="input-blog-skill" name="skill" value="nextjs.png" >
+                    <input type="checkbox" id="skill" name="skill" value="fab fa-js" >
                     <label for="skill" class="label-skill"> Next JS</label>
-                    <input type="checkbox" id="input-blog-skill" name="skill" value="typescript.png" >
+                    <input type="checkbox" id="skill" name="skill" value="fab fa-java" >
                     <label for="skill" class="label-skill"> TypeScript</label>
                   </div>
                 </div>
@@ -64,7 +74,7 @@
               <label>Upload Image</label>
               <div class="input-blog-image-group">
                 <label for="input-blog-image">
-                  <p>Attach File</p>
+                  <p>choose</p>
                   <img src="assets/file.png" alt="file" />
                 </label>
                 <input type="file" id="input-blog-image" hidden />
@@ -74,48 +84,54 @@
               <button>Post Blog</button>
             </div>
           </form>
-
-          <p id="tampil">sdsad</p>
-          <p id="tampil2">sdsad</p>
-          <p id="tampil2">sdsad</p>
         </div>
       </div>
       <hr class="line" />
-      <div id="contents" class="blog-list">
-        <!-- dynamic content would be here -->
-        <div class="blog-list-item">
-          <div class="blog-image">
-            <img src="assets/blog-img.png" alt="" />
+    </div>
+
+    <!-- Display -->
+    <!-- dynamic content would be here -->
+    <div class="display-project">
+      <h1>MY PROJECT</h1>
+      <div class="projects" id="projects">
+    <!-- dynamic content would be here -->
+        <div class="list-project">
+          <div class="header">
+            <a href="blog-detail.html"><img src="assets/img/a.jpg" alt="" width="100%"></a>
+            <p> <b> Dumbways Mobile App - 2022</b></p>
+            <small>durasi :  3 bulan</small>
           </div>
-          <div class="blog-content">
-            <div class="btn-group">
-              <button class="btn-edit">Edit Post</button>
-              <button class="btn-post">Post Blog</button>
-            </div>
-            <h1>
-              <a href="blog-detail.html" target="_blank"
-                >Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a
-              >
-            </h1>
-            <div class="detail-blog-content">
-              12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
-            </div>
-            <p>
-              Ketimpangan sumber daya manusia (SDM) di sektor digital masih
-              menjadi isu yang belum terpecahkan. Berdasarkan penelitian
-              ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
-              meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Quam, molestiae
-              numquam! Deleniti maiores expedita eaque deserunt quaerat! Dicta,
-              eligendi debitis?
+          <div class="content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sint et quibusdam nihil,orem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sint et quibusdam nihil,Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sint et quibusdam nihil,orem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sint et quibusdam nihil,</p>
+            <p class="content-awesome">
+              <i class="fab fa-google-play"></i>
+              <i class="fab fa-android"></i>
+              <i class="fab fa-java"></i>
             </p>
-            <div style="float: right;">
-              <p style="color: grey; font-size : 15px">1 Hours Ago </p> 
+          </div>
+          <div class="footer">
+            <div class="edit">
+              <a href="#">edit</a>
+            </div>
+            <div class="delete">
+              <a href="#">delete</a>
             </div>
           </div>
+          
         </div>
+        
       </div>
     </div>
-    <script src="assets/js/blog.js"></script>
-  </body>
+
+
+
+<!-- END CARD -->
+
+
+<!-- START JS -->
+<script src="assets/js/blog.js"></script>
+
+
+<!-- END JS -->
+</body>
 </html>

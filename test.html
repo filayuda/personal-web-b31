@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+  <form name="form1" onsubmit="dateTest()">
+    <div class="input-date">
+      <div>
+        <label for="input-blog-date">Start Date</label>
+        <input id="input-blog-dateStart" type="date"/>
+      </div>
+      <div class="right">
+        <label for="input-blog-title">End Date</label>
+        <input id="input-blog-dateEnd" type="date" />
+      </div>
+    </div>
+
+    
+    <button>Post Blog</button>
+  </form>
+  
+  <div id="tampil">
+    Distance Month
+  </div>
+
+
+
+
+  <script>
+    let month =[
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
+    function addBlog() { 
+      event.preventDefault() ; //untuk penghentian reload yg berhubungan dengan onsubmit
+
+      let startDate = document.getElementById("input-blog-dateStart").value ; 
+      let endDate = document.getElementById("input-blog-dateEnd").value ; 
+      
+      let start = new Date(startDate) ; 
+      let start1 = start.getMonth() ;
+      let monthFull = month[start1] ; 
+      console.log(start1)  ;
+      console.log(monthFull)  ;
+
+      let end = new Date(endDate) ; 
+      let end1 = start.getMonth() ;
+      let monthFull1 = month[end1] ; 
+      console.log(end1)  ;
+      console.log(monthFull1)  ;
+
+      console.log(monthFull1 - monthFull) ;
+    }
+
+    function dateTest(start,end) { 
+      event.preventDefault() ; //untuk penghentian reload yg berhubungan dengan onsubmit
+
+      let startDate = document.getElementById("input-blog-dateStart").value ; 
+      let endDate = document.getElementById("input-blog-dateEnd").value ; 
+
+
+      const start_date = new Date(startDate) ; 
+      const end_date = new Date(endDate) ; 
+
+      const total_months = (end_date.getFullYear() - start_date.getFullYear())*12 + (end_date.getMonth() - start_date.getMonth()) 
+      
+      document.getElementById("tampil").innerHTML = total_months ; 
+      
+
+
+      
+    }
+
+   
+
+  </script>
+</body>
+</html>

@@ -42,3 +42,21 @@ function getDistanceTime(time) {
 // setInterval(function(){ 
 //     renderBlog() ; 
 // }, 3000) ; 
+
+// <!-- function monthDiff(dateFrom, dateTo) {
+//     return dateTo.getMonth() - dateFrom.getMonth() + 
+//       (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+//    }
+   
+   
+//    //examples
+//    console.log(monthDiff(new Date(2000, 01), new Date(2000, 02))) // 1
+//    console.log(monthDiff(new Date(1999, 02), new Date(2000, 02))) // 12 full year
+//    console.log(monthDiff(new Date(2009, 11), new Date(2010, 0))) // 1
+// -->
+
+
+// Difference in Months between two dates in JavaScript:
+start_date = new Date(year, month, day); //Create start date object by passing appropiate argument end_date = new Date(new Date(year, month, day) 
+total months between start_date and end_date :
+total_months = (end_date.getFullYear() - start_date.getFullYear())*12 + (end_date.getMonth() - start_date.getMonth())
