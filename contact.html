@@ -11,52 +11,60 @@
 <!-- START NAVBAR  -->
 <nav>
   <div class="nav-left">
-    <a href="index.html"><img src="assets/img/logo_dumbways.png" alt="my_logo"></a>
+    <a href="index.html"><img class="img" src="assets/img/logo_dumbways.png" alt="my_logo"></a>
     <ul style="text-decoration: none;">
-      <li><a class="active" href="index.html" target="blank">Home</a></li>
-      <li><a href="blog.html" target="blank">Blog</a></li>
+      <!-- <li><a href="index.html" target="blank">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </div>
 
   <div class="nav-right">
-    <a href="contact.html">Contact me</a>
+    <div class="dropdown">
+      <ul>
+          <li><a href="contact.html">Contact Me</a>
+          <li><a href="#">Task</a>
+              <ul>
+                  <li style="font-size : 12px; "><a href="week1.html">W. 1</a></li>
+              </ul>
+          </li>
+      </ul>
+    </div>
   </div>
 </nav>
 <!-- END NAVBAR  -->
 
 
-
+<!-- START CONTACT -->
    <div class="container">
       <div class="card">
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="fname">Name</label>
-            <input type="text" required id="txt_name" name="firstname" placeholder="Your name..">
+        <form action="#" id="formInput" method="POST" enctype="multipart/form-data">
+            <label for="tname">Name</label>
+            <input type="text" required id="tname" name="tname" placeholder="Your name..">
         
-            <label for="lname">Email</label>
-            <input type="email" required id="txt_email" name="lastname" placeholder="Your last name..">
+            <label for="temail">Email</label>
+            <input type="email" required id="temail" name="temail" placeholder="Your email..">
             
-            <label for="number">Number</label>
-            <input type="text" required id="txt_number" name="number" placeholder="Your number..">
+            <label for="tnumber">Phone</label>
+            <input type="text" required id="tnumber" name="tnumber" placeholder="Your number..">
         
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+            <label for="tsubject">Subject</label>
+            <select id="tsubject" name="tsubject">
+              <option value="Fullstack Developer">Fullstack Developer</option>
+              <option value="Front end">Front end</option>
             </select>
-            <label for="message">Your Message</label>
-            <textarea class="contactMessage" name="message" maxlength="200" id="message" cols="88" rows="10"></textarea>
-            <!-- <input type="submit" value="Submit"> -->
-            <button type="button" onclick="showData()">Submit</button>
+            <label for="tmessage">Your Message</label>
+            <textarea name="tmessage" maxlength="200" id="tmessage" cols="88" rows="10"></textarea>
+            <button type="button" onclick="showData()">SUBMIT</button>
         </form>
       </div>
       
    </div>
 
-
+<!-- END CONTACT -->
 
 <!-- START JS -->
 <script src="assets/js/form_submission.js"></script>
-
 
 <!-- END JS -->
 </body>
